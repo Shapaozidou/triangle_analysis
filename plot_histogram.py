@@ -59,5 +59,8 @@ perimeters = pd.read_excel(filename, index_col=0)
 # Preprocess perimeters.
 perimeters = preprocess(perimeters)
 
+# Calculate the real length.
+perimeters *= (179.81/2560)
+
 # Plot histogram.
 plot_hist(perimeters, filename, bins=10)

@@ -27,7 +27,7 @@ for image in original_images:
     perimeters_all.append(perimeters)
 
 # Calculate the real length.
-pass
+perimeters_all *= (179.81/2560)
 
 # Save data to excel
 result = pd.DataFrame(perimeters_all)
