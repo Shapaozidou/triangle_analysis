@@ -56,11 +56,11 @@ def plot_hist(data, file, bins=5):
 filename = 'data/sample02.xlsx'
 perimeters = pd.read_excel(filename, index_col=0)
 
-# Preprocess perimeters.
-perimeters = preprocess(perimeters)
-
 # Calculate the real length.
 perimeters *= (179.81/2560)
+
+# Preprocess perimeters.
+perimeters = preprocess(perimeters)
 
 # Plot histogram.
 plot_hist(perimeters, filename, bins=10)
